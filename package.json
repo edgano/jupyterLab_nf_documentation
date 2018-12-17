@@ -1,0 +1,44 @@
+{
+  "name": "jupyterlab_nf_documentation",
+  "version": "0.1.0",
+  "description": "Show Nextflow documentation in a new tab",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension"
+  ],
+  "homepage": "https://github.com/edgano/jupyterLab_nf_documentation",
+  "bugs": {
+    "url": "https://github.com/edgano/jupyterLab_nf_documentation/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Edgar Garriga",
+  "files": [
+    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edgano/jupyterLab_nf_documentation.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "prepare": "npm run clean && npm run build",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^0.19.1",
+    "@jupyterlab/docmanager": "^0.19.1",
+    "@phosphor/widgets": "^1.6.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1",
+    "typescript": "~3.1.1"
+  },
+  "jupyterlab": {
+    "extension": true
+  }
+}
